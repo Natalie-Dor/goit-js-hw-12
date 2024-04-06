@@ -1,6 +1,7 @@
 import{a as w,S,i as d}from"./assets/vendor-eded45c0.js";(function(){const r=document.createElement("link").relList;if(r&&r.supports&&r.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))n(e);new MutationObserver(e=>{for(const s of e)if(s.type==="childList")for(const a of s.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&n(a)}).observe(document,{childList:!0,subtree:!0});function i(e){const s={};return e.integrity&&(s.integrity=e.integrity),e.referrerPolicy&&(s.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?s.credentials="include":e.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function n(e){if(e.ep)return;e.ep=!0;const s=i(e);fetch(e.href,s)}})();async function g(t,r){const e="https://pixabay.com/api/",s={key:"43209712-864cbe761aaf2bd904c3cc70a",q:t,image_type:"photo",orientation:"horizontal",safesearch:!0,page:r,per_page:15};return(await w.get(e,{params:s})).data}function M(t){const{id:r,largeImageURL:i,webformatURL:n,tags:e,likes:s,views:a,comments:E,downloads:b}=t;return`<li class="gallery-item data-id="${r}">
         <a class="gallery-link" href="${i}">
           <img
+          loading="lazy"
             class="gallery-image"
             width="360"
             height="200"
