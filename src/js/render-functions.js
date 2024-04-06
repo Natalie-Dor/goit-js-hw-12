@@ -12,6 +12,7 @@ function imgTemplate(data) {
   return `<li class="gallery-item data-id="${id}">
         <a class="gallery-link" href="${largeImageURL}">
           <img
+          loading="lazy"
             class="gallery-image"
             width="360"
             height="200"
